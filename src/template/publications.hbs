@@ -1,0 +1,222 @@
+{{> nav}}
+
+<!-- ===============================================-->
+<!--    Main Content-->
+<!-- ===============================================-->
+
+<main>
+
+
+    <!-- ============================================-->
+    <!-- Preloader ==================================-->
+    <div class="preloader" id="preloader">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-white-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================-->
+    <!-- End of Preloader ===========================-->
+    <section class="py-0 overflow-hidden" id="top">
+        <div class="flexslider border-0 overflow-hidden rounded-0">
+            <ul class="slides">
+                <li data-zanim-timeline='{"delay":0.1}'>
+                    <div class="bg-holder overlay_header parallax"
+                         style="background-image:url(../assets/img/home/headers/book_banner.jpg);">
+                    </div>
+                    <!--/.bg-holder-->
+
+                    <div class="header-overlay"></div>
+                    <div class="container">
+                        <div class="d-flex align-items-center pt-10 pb-8">
+                            <div class="header-text">
+                                <div class="overflow-hidden">
+                                    <h1 class="display-3 text-white fs-5 fs-md-7"
+                                        data-zanim-xs='{"duration":2,"delay":0}'><br>Publications</h1>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <p class="text-uppercase text-400 ls-2 mt-2"
+                                       data-zanim-xs='{"duration":2,"delay":0.1}'><br class="d-block d-md-none"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+
+    <section>
+        <div class="container">
+
+
+            <div class="row">
+
+                <div class="col-4">
+
+                    <div class="ui styled fluid accordion" data-options='{"exclusive":false}'>
+                        <div class="active title"><i class="dropdown icon"></i>
+                            <h5 class="d-inline-block fs-0">Authors</h5>
+                        </div>
+                        <div class="content">
+
+                            <input type="checkbox" id="author1" name="author1" value="author">
+                            <label for="author1" class="">Author</label><br><br>
+                            <input type="checkbox" id="author2" name="author2" value="author">
+                            <label for="author2">Author</label><br><br>
+                            <input type="checkbox" id="author3" name="author3" value="author">
+                            <label for="author3">Author</label><br>
+
+                        </div>
+                        <div class="title"><i class="dropdown icon"></i>
+                            <h5 class="d-inline-block fs-0">Type</h5>
+                        </div>
+                        <div class="content">
+
+                            <input type="checkbox" id="type1" name="type1" value="Books&Chapters">
+                            <label for="type1">Books & Chapters</label><br><br>
+                            <input type="checkbox" id="type2" name="type2" value="ResearchArticles">
+                            <label for="type2">Research Articles</label><br><br>
+                            <input type="checkbox" id="type3" name="type3" value="ReviewArticles">
+                            <label for="type3">Review Articles</label><br><br>
+                            <input type="checkbox" id="type4" name="type4" value="Dissertation&Theses">
+                            <label for="type4">Dissertation & Theses</label><br><br>
+                            <input type="checkbox" id="type5" name="type5" value="ConferenceContent">
+                            <label for="type5">Conference Content</label><br>
+
+
+                        </div>
+                        <div class="title"><i class="dropdown icon"></i>
+                            <h5 class="d-inline-block fs-0">Species</h5>
+                        </div>
+                        <div class="content">
+
+                            <input type="checkbox" id="species1" name="species1" value="species">
+                            <label for="species1" class="">Species</label><br><br>
+                            <input type="checkbox" id="species2" name="species2" value="species">
+                            <label for="species2">Species</label><br><br>
+                            <input type="checkbox" id="species3" name="species3" value="species">
+                            <label for="species3">Species</label><br>
+
+                        </div>
+                        <div class="title active"><i class="dropdown icon"></i>
+                            <h5 class="d-inline-block fs-0">Filter By Years</h5>
+                        </div>
+                        <div class="content active">
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <p>Start:</p>
+                                    <input class="form-control" id="minVal" type="number" value="1985" min="1985"
+                                           max="2020"/>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <p>End:</p>
+                                    <input class="form-control" id="maxVal" type="number" value="2020" min="1985"
+                                           max="2020"/>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div align="center">
+                        <button class="btn btn-dark rounded-capsule mr-1 mb-1" type="button">
+                            Search<span class="fas fa-search ml-1" data-fa-transform="shrink-3"></span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="col-8">
+                    <div class="row">
+
+                        {{#unless pubFilters}}
+                            <div class="col-8">
+
+                                <h4>{{publication_count}} Result(s) For:</h4>
+                                <h4>All Publications</h4>
+
+
+                            </div>
+                        {{else}}
+                            <div class="col-8">
+
+                                <h4>{{publication_count}} Result(s) For:</h4>
+                                <h4>{{filter}}</h4>
+
+
+                            </div>
+                        {{/unless}}
+                    </div>
+<br>
+                    {{#if publication_count}}
+                        {{#each publications}}
+                        <div class="ui fluid accordion" data-options='{"exclusive":false}'>
+                            <div class="border-lg-left showcase-default-padding-left">
+                                <div class="title publication border-300">
+                                    <p style="margin-bottom: 0 !important;" class="d-inline-block fs-0">
+                                        {{#each ../authors}}
+                                            {{#ifvalue pubID equals= ../pubID}}
+                                                {{#ifvalue total_authors equals= '1'}}
+                                                    {{lastName}} {{firstInitial}}.
+                                                {{else}}
+                                                    {{#ifvalue total_authors equals= author_position}}
+                                                        and {{lastName}} {{firstInitial}}.
+                                                    {{else}}
+                                                        {{lastName}} {{firstInitial}},&nbsp
+                                                    {{/ifvalue}}
+
+                                                {{/ifvalue}}
+
+                                            {{/ifvalue}}
+                                        {{/each}} {{year}}.
+                                        <!-- Tiersch, Terrence R., and William T. Monroe.-->
+                                        {{title}}.
+                                        {{journal}} {{issue}}:{{pages}}.</p>
+                                </div>
+                                <div class="content">
+                                    {{{abstract}}}
+
+                                    <a href="{{../pdfdirlocation}}{{pdfpath}}" class="hvr-sweep-top btn btn-outline-primary mr-1 mb-1" target="_blank">View PDF</a>
+                                </div>
+                            </div>
+                        </div>
+                            <br>
+                        {{/each}}
+                    {{/if}}
+
+
+                </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+    <br><br><br>
+
+</main>
+
+
+{{>footer}}

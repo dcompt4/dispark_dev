@@ -1,0 +1,44 @@
+/* This is where we change the style. Will overwrite all other style. */
+
+.application-row{
+  cursor: pointer;
+
+  .application-actions {
+    float: left;
+    width: 100%;
+
+
+    .btn-group-vertical{
+      display: none;
+      button {
+        margin: 1px;
+      }
+      a{
+        margin: 1px;
+      }
+    }
+  }
+}
+
+.application-row-active {
+  .btn-group-vertical{
+    display: block !important;
+    color: white;
+  }
+
+}
+
+
+.display-none {
+  display: none !important;
+}
+
+.vertical-align-middle{
+  vertical-align: middle;
+}
+
+//Removes extra Border in modals when there are tabs present at the top
+.tab-modal{
+  border: none;
+}
+//

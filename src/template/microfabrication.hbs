@@ -1,0 +1,611 @@
+{{> nav}}
+
+<!-- ===============================================-->
+<!--    Main Content-->
+<!-- ===============================================-->
+
+<main>
+
+
+    <!-- ============================================-->
+    <!-- Preloader ==================================-->
+    <div class="preloader" id="preloader">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-white-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================-->
+    <!-- End of Preloader ===========================-->
+    <section class="py-0 overflow-hidden" id="top">
+        <div class="flexslider border-0 overflow-hidden rounded-0">
+            <ul class="slides">
+                <li data-zanim-timeline='{"delay":0.1}'>
+                    <div class="bg-holder overlay_header parallax"
+                         style="background-image:url(../assets/img/headers/3DprintingPrinterGIF.gif);">
+                    </div>
+                    <!--/.bg-holder-->
+
+                    <div class="header-overlay"></div>
+                    <div class="container">
+                        <div class="d-flex align-items-center pt-10 pb-8">
+                            <div class="header-text">
+                                <div class="overflow-hidden">
+                                    <h1 class="display-3 text-white fs-5 fs-md-7"
+                                        data-zanim-xs='{"duration":2,"delay":0}'><br>Microfabrication</h1>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <p class="text-uppercase text-400 ls-2 mt-2"
+                                       data-zanim-xs='{"duration":2,"delay":0.1}'><br class="d-block d-md-none"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="pt-3 pt-lg-5 pb-6 pb-lg-8 text-center" id="about-us">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+
+                <div class="col-12">
+
+                    <div class="overflow-hidden" align="left">
+                        <h2 class="fs-sm-5 mb-2" data-zanim-xs='{"duration":1.5,"delay":0}'>What is microfabrication?</h2>
+                    </div>
+                    <p class="lead" align="left">
+                        Microfabrication and micromachining are terms that describe the technologies and processes used
+                        in making microscopic structures or devices. These structures can range in size from the width
+                        of a human hair down to smaller than a single human cell. The ability to build devices this
+                        small has spurred technological advancements in computers, consumer electronics, green energy
+                        technology and many other fields. Microfabrication techniques vary widely depending on the
+                        device being built.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="text-center pb-0" style="padding-top:0 !important;">
+
+
+        <!-- ================================================-->
+        <!--  Fab Sortable Cards ============================-->
+
+        <div class="container-fluid col-md-8">
+            <div class="sortable" data-options='{"layoutMode":packery"}'>
+                <br>
+
+                <!-- Subject Filters-->
+                <div class="menu mb-3 justify-content-center">
+                    <!--
+                                        <div class="item" data-filter="*">all</div>
+                    -->
+                    <div class="item active" id="stereo-sort" data-filter=".stereolithography">Stereolithography</div>
+                    <div class="item" id="prof-sort" data-filter=".profilometry">Profilometry</div>
+                    <div class="item" id="microE-sort" data-filter=".microelectrodes">Microelectrodes</div>
+                    <div class="item" id="microM-sort" data-filter=".micromilling">Micromilling</div>
+                    <div class="item" id="etch-sort" data-filter=".etching">Etching</div>
+
+
+                </div>
+                <!-- /Subject Filters-->
+
+                <!-- Card List-->
+                <div class="sortable" data-options='{"layoutMode":"packery"}'>
+                    <div class="row no-gutters sortable-container sortable-container-gutter-fix hoverdir-grid "
+                         data-zanim-timeline="{}" data-zanim-trigger="scroll">
+
+                        <!--3D-Printing Card-->
+                        <div class="col-6 col-md-3 sortable-item p-2 stereolithography small"
+                             data-zanim-xs='{"animation":"zoom-in","delay":0}'>
+                            <div class="hoverdir-item position-relative rounded overflow-hidden "
+                                 data-griddercontent="#content1"
+                                 data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
+                                <a class="d-block" data-remodal-target="3dPrinting">
+                                    <img class="rounded img-fluid w-100"
+                                         src="../assets/img/technology/3D_printing.jpg" alt=""/>
+                                    <div class="hoverdir-item-content">
+                                        <div class="h-100 d-flex flex-center p-3 hoverdir-text">
+                                            <div class="text-700">
+                                                <h3 class="text-white lh-1 fs-2">3-D Printing</h3>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--/3D-Printing Card-->
+
+                        <!--Soft Lithography Card-->
+                        <div class="col-6 col-md-3 sortable-item p-2 profilometry small"
+                             data-zanim-xs='{"animation":"zoom-in","delay":0}'>
+                            <div class="hoverdir-item position-relative rounded overflow-hidden "
+                                 data-griddercontent="#content1"
+                                 data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
+                                <a class="d-block" data-remodal-target="softLithography">
+                                    <img class="rounded img-fluid w-100"
+                                         src="../assets/img/home/masonry_square_400x400.jpg" alt=""/>
+                                    <div class="hoverdir-item-content">
+                                        <div class="h-100 d-flex flex-center p-3 hoverdir-text">
+                                            <div class="text-700">
+                                                <h3 class="text-white lh-1 fs-2">Soft Lithography</h3>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--/Soft Lithography Card-->
+
+                        <!--CNC Router Card-->
+                        <div class="col-6 col-md-3 sortable-item p-2 microelectrodes small"
+                             data-zanim-xs='{"animation":"zoom-in","delay":0}'>
+                            <div class="hoverdir-item position-relative rounded overflow-hidden "
+                                 data-griddercontent="#content1"
+                                 data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
+                                <a class="d-block" data-remodal-target="cncRouter">
+                                    <img class="rounded img-fluid w-100"
+                                         src="../assets/img/technology/cnc.jpg" alt=""/>
+                                    <div class="hoverdir-item-content">
+                                        <div class="h-100 d-flex flex-center p-3 hoverdir-text">
+                                            <div class="text-700">
+                                                <h3 class="text-white lh-1 fs-2">CNC Router</h3>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--/CNC Router Card-->
+
+                        <!--5-Axis Mill Card-->
+                        <div class="col-6 col-md-3 sortable-item p-2 micromilling small"
+                             data-zanim-xs='{"animation":"zoom-in","delay":0}'>
+                            <div class="hoverdir-item position-relative rounded overflow-hidden "
+                                 data-griddercontent="#content1"
+                                 data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
+                                <a class="d-block" data-remodal-target="5axisMill">
+                                    <img class="rounded img-fluid w-100"
+                                         src="../assets/img/technology/5axis.jpg" alt=""/>
+                                    <div class="hoverdir-item-content">
+                                        <div class="h-100 d-flex flex-center p-3 hoverdir-text">
+                                            <div class="text-700">
+                                                <h3 class="text-white lh-1 fs-2">5-axis Mill</h3>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--/5-Axis Mill Card-->
+
+                        <!-- Soft Lithography Card-->
+                        <div class="col-6 col-md-3 sortable-item p-2 etching small"
+                             data-zanim-xs='{"animation":"zoom-in","delay":0}'>
+                            <div class="hoverdir-item position-relative rounded overflow-hidden "
+                                 data-griddercontent="#content1"
+                                 data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
+                                <a class="d-block" data-remodal-target="softLithography">
+                                    <img class="rounded img-fluid w-100"
+                                         src="../assets/img/home/masonry_square_400x400.jpg" alt=""/>
+                                    <div class="hoverdir-item-content">
+                                        <div class="h-100 d-flex flex-center p-3 hoverdir-text">
+                                            <div class="text-700">
+                                                <h3 class="text-white lh-1 fs-2">Soft Lithography</h3>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--/Soft Lithography Card-->
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  End Fab Sortable Cards ========================-->
+        <!-- ================================================-->
+
+
+        <!-- ===============================================-->
+        <!--  Fab Technology Modals ========================-->
+
+        <!-- =================================-->
+        <!-- 3D Printing Modal ===============-->
+        <div class="remodal rounded-soft" data-remodal-id="3dPrinting" data-remodal-options="hashTracking: false">
+            <button class="remodal-close" data-remodal-action="close" href="#fabrication"></button>
+
+            <div class="component-preview tab-modal">
+
+                <!-- Color Scheme Themed Pill Tabs-->
+                <ul class="nav nav-tabs" id="3dPrintingTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link nav-tabs alpha active" id="background-tab-3dPrinting" data-toggle="tab"
+                           href="#pill-tab-background-3dPrinting"
+                           role="tab" aria-controls="tab-home" aria-selected="true">Background</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-tabs beta" id="process-tab-3dPrinting" data-toggle="tab"
+                           href="#pill-tab-process-3dPrinting" role="tab"
+                           aria-controls="tab-profile" aria-selected="false">Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-tabs product" id="products-tab-3dPrinting" data-toggle="tab"
+                           href="#pill-tab-products-3dPrinting"
+                           role="tab" aria-controls="tab-contact" aria-selected="false">Products</a>
+                    </li>
+                </ul>
+                <!-- /Color Scheme Themed Pill Tabs-->
+
+                <!-- Tab Content-->
+                <div class="tab-content border-x border-bottom p-3" id="3dPrintingTabContent">
+
+                    <div class="tab-pane fade show active" id="pill-tab-background-3dPrinting" role="tabpanel"
+                         aria-labelledby="home-tab">
+                        <div>
+                            <h2 class="fs-sm-5 mb-2" data-zanim-xs='{"duration":1.5,"delay":0}'>3D-Printing</h2>
+
+                            <p class="mb-0" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod quis viverra nibh
+                                cras pulvinar. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Purus in
+                                mollis nunc sed id semper. Tellus orci ac auctor augue mauris augue neque. Sed viverra
+                                tellus in hac. Faucibus interdum posuere lorem ipsum dolor. Egestas fringilla phasellus
+                                faucibus scelerisque eleifend donec pretium vulputate sapien. Cras fermentum odio eu
+                                feugiat. In egestas erat imperdiet sed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade " id="pill-tab-process-3dPrinting" role="tabpanel"
+                         aria-labelledby="profile-tab">
+                        <div>
+                            <h2 class="fs-sm-5 mb-2" data-zanim-xs='{"duration":1.5,"delay":0}'>3D-Printing</h2>
+
+                            <p class="mb-0" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod quis viverra nibh
+                                cras pulvinar. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Purus in
+                                mollis nunc sed id semper. Tellus orci ac auctor augue mauris augue neque. Sed viverra
+                                tellus in hac. Faucibus interdum posuere lorem ipsum dolor. Egestas fringilla phasellus
+                                faucibus scelerisque eleifend donec pretium vulputate sapien. Cras fermentum odio eu
+                                feugiat. In egestas erat imperdiet sed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="pill-tab-products-3dPrinting" role="tabpanel"
+                         aria-labelledby="contact-tab">
+                        <div>
+                            <h2 class="fs-sm-5 mb-2" data-zanim-xs='{"duration":1.5,"delay":0}'>3D-Printing</h2>
+
+                            <p class="mb-0" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod quis viverra nibh
+                                cras pulvinar. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Purus in
+                                mollis nunc sed id semper. Tellus orci ac auctor augue mauris augue neque. Sed viverra
+                                tellus in hac. Faucibus interdum posuere lorem ipsum dolor. Egestas fringilla phasellus
+                                faucibus scelerisque eleifend donec pretium vulputate sapien. Cras fermentum odio eu
+                                feugiat. In egestas erat imperdiet sed.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- /Tab Content-->
+
+            </div>
+        </div>
+        <!-- /3D Printing Modal ==============-->
+        <!-- =================================-->
+
+        <!-- =================================-->
+        <!-- Soft Lithography Modal ==========-->
+        <div class="remodal rounded-soft" data-remodal-id="softLithography" data-remodal-options="hashTracking: false">
+            <button class="remodal-close" data-remodal-action="close" href="#fabrication"></button>
+
+            <div class="component-preview tab-modal">
+
+                <!-- Color Scheme Themed Pill Tabs-->
+                <ul class="nav nav-tabs" id="softLithographyTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link nav-tabs alpha active" id="background-tab-softLithography" data-toggle="tab"
+                           href="#pill-tab-background-softLithography"
+                           role="tab" aria-controls="tab-home" aria-selected="true">Background</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-tabs beta" id="process-tab-softLithography" data-toggle="tab"
+                           href="#pill-tab-process-softLithography" role="tab"
+                           aria-controls="tab-profile" aria-selected="false">Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-tabs product" id="products-tab-softLithography" data-toggle="tab"
+                           href="#pill-tab-products-softLithography"
+                           role="tab" aria-controls="tab-contact" aria-selected="false">Products</a>
+                    </li>
+                </ul>
+                <!-- /Color Scheme Themed Pill Tabs-->
+
+                <!-- Tab Content-->
+                <div class="tab-content border-x border-bottom p-3" id="softLithographyTabContent">
+
+                    <div class="tab-pane fade show active" id="pill-tab-background-softLithography" role="tabpanel"
+                         aria-labelledby="home-tab">
+                        <div>
+                            <h2 class="fs-sm-5 mb-2" data-zanim-xs='{"duration":1.5,"delay":0}'>Soft Lithography</h2>
+
+                            <p class="mb-0" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod quis viverra nibh
+                                cras pulvinar. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Purus in
+                                mollis nunc sed id semper. Tellus orci ac auctor augue mauris augue neque. Sed viverra
+                                tellus in hac. Faucibus interdum posuere lorem ipsum dolor. Egestas fringilla phasellus
+                                faucibus scelerisque eleifend donec pretium vulputate sapien. Cras fermentum odio eu
+                                feugiat. In egestas erat imperdiet sed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade " id="pill-tab-process-softLithography" role="tabpanel"
+                         aria-labelledby="profile-tab">
+                        <div>
+                            <h2 class="fs-sm-5 mb-2" data-zanim-xs='{"duration":1.5,"delay":0}'>Soft Lithography</h2>
+
+                            <p class="mb-0" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod quis viverra nibh
+                                cras pulvinar. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Purus in
+                                mollis nunc sed id semper. Tellus orci ac auctor augue mauris augue neque. Sed viverra
+                                tellus in hac. Faucibus interdum posuere lorem ipsum dolor. Egestas fringilla phasellus
+                                faucibus scelerisque eleifend donec pretium vulputate sapien. Cras fermentum odio eu
+                                feugiat. In egestas erat imperdiet sed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="pill-tab-products-softLithography" role="tabpanel"
+                         aria-labelledby="contact-tab">
+                        <div>
+                            <h2 class="fs-sm-5 mb-2" data-zanim-xs='{"duration":1.5,"delay":0}'>Soft Lithography</h2>
+
+                            <p class="mb-0" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod quis viverra nibh
+                                cras pulvinar. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Purus in
+                                mollis nunc sed id semper. Tellus orci ac auctor augue mauris augue neque. Sed viverra
+                                tellus in hac. Faucibus interdum posuere lorem ipsum dolor. Egestas fringilla phasellus
+                                faucibus scelerisque eleifend donec pretium vulputate sapien. Cras fermentum odio eu
+                                feugiat. In egestas erat imperdiet sed.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- /Tab Content-->
+
+            </div>
+        </div>
+        <!-- /Soft Lithography Modal =========-->
+        <!-- =================================-->
+
+        <!-- =================================-->
+        <!-- CNC Router Modal ================-->
+        <div class="remodal rounded-soft" data-remodal-id="cncRouter" data-remodal-options="hashTracking: false">
+            <button class="remodal-close" data-remodal-action="close" href="#fabrication"></button>
+
+            <div class="component-preview tab-modal">
+
+                <!-- Color Scheme Themed Pill Tabs-->
+                <ul class="nav nav-tabs" id="cncRouterTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link nav-tabs alpha active" id="background-tab-cncRouter" data-toggle="tab"
+                           href="#pill-tab-background-cncRouter"
+                           role="tab" aria-controls="tab-home" aria-selected="true">Background</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-tabs beta" id="process-tab-cncRouter" data-toggle="tab"
+                           href="#pill-tab-process-cncRouter" role="tab"
+                           aria-controls="tab-profile" aria-selected="false">Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-tabs product" id="products-tab-cncRouter" data-toggle="tab"
+                           href="#pill-tab-products-cncRouter"
+                           role="tab" aria-controls="tab-contact" aria-selected="false">Products</a>
+                    </li>
+                </ul>
+                <!-- /Color Scheme Themed Pill Tabs-->
+
+                <!-- Tab Content-->
+                <div class="tab-content border-x border-bottom p-3" id="cncRouterTabContent">
+
+                    <div class="tab-pane fade show active" id="pill-tab-background-cncRouter" role="tabpanel"
+                         aria-labelledby="home-tab">
+                        <div>
+                            <h2 class="fs-sm-5 mb-2" data-zanim-xs='{"duration":1.5,"delay":0}'>CNC Router</h2>
+
+                            <p class="mb-0" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod quis viverra nibh
+                                cras pulvinar. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Purus in
+                                mollis nunc sed id semper. Tellus orci ac auctor augue mauris augue neque. Sed viverra
+                                tellus in hac. Faucibus interdum posuere lorem ipsum dolor. Egestas fringilla phasellus
+                                faucibus scelerisque eleifend donec pretium vulputate sapien. Cras fermentum odio eu
+                                feugiat. In egestas erat imperdiet sed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade " id="pill-tab-process-cncRouter" role="tabpanel"
+                         aria-labelledby="profile-tab">
+                        <div>
+                            <h2 class="fs-sm-5 mb-2" data-zanim-xs='{"duration":1.5,"delay":0}'>CNC Router</h2>
+
+                            <p class="mb-0" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod quis viverra nibh
+                                cras pulvinar. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Purus in
+                                mollis nunc sed id semper. Tellus orci ac auctor augue mauris augue neque. Sed viverra
+                                tellus in hac. Faucibus interdum posuere lorem ipsum dolor. Egestas fringilla phasellus
+                                faucibus scelerisque eleifend donec pretium vulputate sapien. Cras fermentum odio eu
+                                feugiat. In egestas erat imperdiet sed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="pill-tab-products-cncRouter" role="tabpanel"
+                         aria-labelledby="contact-tab">
+                        <div>
+                            <h2 class="fs-sm-5 mb-2" data-zanim-xs='{"duration":1.5,"delay":0}'>CNC Router</h2>
+
+                            <p class="mb-0" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod quis viverra nibh
+                                cras pulvinar. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Purus in
+                                mollis nunc sed id semper. Tellus orci ac auctor augue mauris augue neque. Sed viverra
+                                tellus in hac. Faucibus interdum posuere lorem ipsum dolor. Egestas fringilla phasellus
+                                faucibus scelerisque eleifend donec pretium vulputate sapien. Cras fermentum odio eu
+                                feugiat. In egestas erat imperdiet sed.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- /Tab Content-->
+
+            </div>
+        </div>
+        <!-- /CNC Router Modal ===============-->
+        <!-- =================================-->
+
+        <!-- =================================-->
+        <!-- CNC Router Modal ================-->
+        <div class="remodal rounded-soft" data-remodal-id="5axisMill" data-remodal-options="hashTracking: false">
+            <button class="remodal-close" data-remodal-action="close" href="#fabrication"></button>
+
+            <div class="component-preview tab-modal">
+
+                <!-- Color Scheme Themed Pill Tabs-->
+                <ul class="nav nav-tabs" id="5axisMillTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link nav-tabs alpha active" id="background-tab-5axisMill" data-toggle="tab"
+                           href="#pill-tab-background-5axisMill"
+                           role="tab" aria-controls="tab-home" aria-selected="true">Background</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-tabs beta" id="process-tab-5axisMill" data-toggle="tab"
+                           href="#pill-tab-process-5axisMill" role="tab"
+                           aria-controls="tab-profile" aria-selected="false">Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-tabs product" id="products-tab-5axisMill" data-toggle="tab"
+                           href="#pill-tab-products-5axisMill"
+                           role="tab" aria-controls="tab-contact" aria-selected="false">Products</a>
+                    </li>
+                </ul>
+                <!-- /Color Scheme Themed Pill Tabs-->
+
+                <!-- Tab Content-->
+                <div class="tab-content border-x border-bottom p-3" id="5axisMillTabContent">
+
+                    <div class="tab-pane fade show active" id="pill-tab-background-5axisMill" role="tabpanel"
+                         aria-labelledby="home-tab">
+                        <div>
+                            <h2 class="fs-sm-5 mb-2" data-zanim-xs='{"duration":1.5,"delay":0}'>5-Axis Mill</h2>
+
+                            <p class="mb-0" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod quis viverra nibh
+                                cras pulvinar. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Purus in
+                                mollis nunc sed id semper. Tellus orci ac auctor augue mauris augue neque. Sed viverra
+                                tellus in hac. Faucibus interdum posuere lorem ipsum dolor. Egestas fringilla phasellus
+                                faucibus scelerisque eleifend donec pretium vulputate sapien. Cras fermentum odio eu
+                                feugiat. In egestas erat imperdiet sed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade " id="pill-tab-process-5axisMill" role="tabpanel"
+                         aria-labelledby="profile-tab">
+                        <div>
+                            <h2 class="fs-sm-5 mb-2" data-zanim-xs='{"duration":1.5,"delay":0}'>5-Axis Mill</h2>
+
+                            <p class="mb-0" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod quis viverra nibh
+                                cras pulvinar. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Purus in
+                                mollis nunc sed id semper. Tellus orci ac auctor augue mauris augue neque. Sed viverra
+                                tellus in hac. Faucibus interdum posuere lorem ipsum dolor. Egestas fringilla phasellus
+                                faucibus scelerisque eleifend donec pretium vulputate sapien. Cras fermentum odio eu
+                                feugiat. In egestas erat imperdiet sed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="pill-tab-products-5axisMill" role="tabpanel"
+                         aria-labelledby="contact-tab">
+                        <div>
+                            <h2 class="fs-sm-5 mb-2" data-zanim-xs='{"duration":1.5,"delay":0}'>5-Axis Mill</h2>
+
+                            <p class="mb-0" align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod quis viverra nibh
+                                cras pulvinar. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Purus in
+                                mollis nunc sed id semper. Tellus orci ac auctor augue mauris augue neque. Sed viverra
+                                tellus in hac. Faucibus interdum posuere lorem ipsum dolor. Egestas fringilla phasellus
+                                faucibus scelerisque eleifend donec pretium vulputate sapien. Cras fermentum odio eu
+                                feugiat. In egestas erat imperdiet sed.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- /Tab Content-->
+
+            </div>
+        </div>
+        <!-- /CNC Router Modal ===============-->
+        <!-- =================================-->
+
+
+        <!--  End Fab Technology Modals ====================-->
+        <!-- ===============================================-->
+
+
+
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+
+    <br><br><br>
+
+</main>
+
+
+{{>footer}}

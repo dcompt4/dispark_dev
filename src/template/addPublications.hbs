@@ -1,0 +1,433 @@
+{{> navCreate}}
+<!-- ============================================-->
+<!-- Preloader ==================================-->
+<div class="preloader" id="preloader">
+    <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-white-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================-->
+<!-- End of Preloader ===========================-->
+
+
+<!-- ============================================-->
+<!-- <section> begin ============================-->
+<section class="py-0 overflow-hidden" id="top">
+    <div class="flexslider border-0 overflow-hidden rounded-0">
+        <ul class="slides">
+            <li data-zanim-timeline='{"delay":0.1}'>
+                <div class="bg-holder overlay_header parallax"
+                     style="background-image:url(../assets/img/headers/aggrcCreateheader.jpg);">
+                    <!--<video autoplay muted loop id="myVideo">
+                        <source src="../assets/img/videos/aggrc_green-tank-banner.mp4" type="video/mp4">
+                    </video>-->
+                </div>
+                <!--/.bg-holder-->
+
+                <div class="header-overlay"></div>
+                <div class="container">
+                    <div class="d-flex align-items-center pt-10 pb-8">
+                        <div class="header-text">
+                            <div class="overflow-hidden">
+                                <h1 class="display-3 text-white fs-5 fs-md-7"
+                                    data-zanim-xs='{"duration":2,"delay":0}'>Publication Page Editing</h1>
+                            </div>
+                            <div class="overflow-hidden">
+                                <p class="text-uppercase text-400 ls-2 mt-2"
+                                   data-zanim-xs='{"duration":2,"delay":0.1}'><br class="d-block d-md-none"></p>
+                            </div>
+                            <br><br><br>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</section>
+<!-- <section> close ============================-->
+<!-- ============================================-->
+
+
+<div class="container">
+    <div id="blankReviewForm" style="display: none;">
+        <br>
+
+        <form id="anchorBlankReviewAdmin">
+            <h5>Blank Review - Administrative Data</h5>
+            <div class="form-group">
+                <!-- label for="exampleFormControlTextarea1"></label-->
+                <textarea class="form-control ck-textarea" id="blank-textarea"
+                          rows="3"></textarea>
+            </div>
+
+        </form>
+
+    </div>
+    <!--<button class="btn btn-primary btn-new-journal">New Journal Article</button>-->
+    <button class="btn btn-primary btn-new-journal" type="button" data-toggle="modal"
+            data-target="#journalArticleModal">New Journal Article
+    </button>
+
+
+    <br><br>
+    <div class="row row-card padding-10" style="margin: 5px;">
+        <div class="form-group col-sm-12 col-md-12 col-lg-3">
+            <label for="searchApplicationNumber">Type</label>
+            <input type="text" class="form-control" id="searchApplicationNumber" placeholder="Search...">
+        </div>
+        <div class="form-group col-sm-12 col-md-12 col-lg-3">
+            <label for="searchTitle">Title</label>
+            <input type="text" class="form-control" id="searchTitle" placeholder="Search...">
+        </div>
+        <!-- <div class="form-group col-sm-12 col-md-12 col-lg-3">
+             <label for="searchPI">Author(s)</label>
+             <input type="text" class="form-control" id="searchPI" placeholder="Search...">
+         </div>-->
+        <!--<div class="form-group col-sm-12 col-md-12 col-lg-3">
+            <label for="searchProgress">Species</label>
+            <input type="text" class="form-control" id="searchProgress" placeholder="Search...">
+        </div>-->
+        <div class="form-group col-sm-12 col-md-12 col-lg-3">
+            <label for="searchProgress">Key Words</label>
+            <input type="text" class="form-control" id="searchProgress" placeholder="Search...">
+        </div>
+
+    </div> <!-- End filter row -->
+    <div class="row row-card padding-10">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <h2 class="h2-heading">Publications</h2>
+            <table class="table table-hover border-top-none">
+                <thead>
+                <tr>
+                    <th scope="col" style="width: 10%">Type</th>
+                    <th scope="col" style="width: 10%">Title</th>
+                    <th scope="col" style="width: 10%">Authors</th>
+                    <th scope="col" style="width: 10%">Species</th>
+                    <th scope="col" style="width: 10%">Key Words</th>
+
+                    <th scope="col" style="width: 10%"></th>
+                </tr>
+                </thead>
+                <tbody id="publicationsTable">
+                {{#each publications}}
+
+                    <tr class="application-row" data-pubid='{{pubID}}'>
+
+                        <td>
+                            {{type}}
+                        </td>
+                        <td>{{title}}</td>
+                        <td>
+                            {{#if ../authors}}
+                                {{#each ../authors}}
+                                    {{#ifvalue pubID equals= ../pubID}}
+                                        {{firstInitial}} {{lastName}}<br>
+                                    {{/ifvalue}}
+                                {{/each}}
+                            {{else}}
+                                <button class="btn btn-primary btn-new-author" type="button" data-toggle="modal"
+                                        data-target="#authorsModal">Add Authors
+                                </button>
+                            {{/if}}
+                        </td>
+
+                        <td>
+                            {{#each ../species}}
+                                {{#ifvalue pubID equals= ../pubID}}
+                                    <i>{{genus}} {{species}}</i> ({{commonName}})<br>
+                                {{/ifvalue}}
+                            {{/each}}
+                        </td>
+                        <td>{{keywords}}</td>
+
+
+                        <td class='application-actions'>
+
+
+                            <div class="btn-group-vertical">
+
+                                <a class="btn btn-primary edit-publication"
+                                   data-pubid="{{pubID}}">
+                                    <span class="vertical-align-middle">Edit</a>
+
+                                <button class="btn btn-warning disable-application">
+                                    <span
+                                            class="vertical-align-middle">Download PDF
+                                </button>
+                            </div>
+
+
+                        </td>
+
+                {{/each}}
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{{>footer}}
+<!-- Journal Article Modal-->
+<div class="modal fade" id="journalArticleModal" tabindex="-1" role="dialog" aria-labelledby="journalArticleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Journal Article</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span
+                        class="font-weight-light" aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <form class="form">
+
+                    <div class="form-group">
+                        <label for="articleTitle">Article Title</label>
+                        <input type="text" class="form-control" id="articleTitle" aria-describedby=""
+                               placeholder="">
+
+                    </div>
+                    <!--<div class="form-group">
+                        <label for="journalAuthors">Author</label>
+                        <input type="text" class="form-control" id="journalAuthors" aria-describedby=""
+                               placeholder="">
+
+                    </div>-->
+                    <div class="form-group">
+                        <label for="journal">Journal Title</label>
+                        <input type="text" class="form-control" id="journal" aria-describedby=""
+                               placeholder="">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="journalYear">Year</label>
+                        <input type="text" class="form-control" id="journalYear" aria-describedby=""
+                               placeholder="">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="journalIssue">Issue</label>
+                        <input type="text" class="form-control" id="journalIssue" aria-describedby=""
+                               placeholder="">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="journalPages">Pages</label>
+                        <input type="text" class="form-control" id="journalPages" aria-describedby=""
+                               placeholder="">
+
+                    </div>
+                    <!-- <div class="form-group">
+                         <label for="journalSpecies">Species</label>
+                         <input type="text" class="form-control" id="journalSpecies" aria-describedby=""
+                                placeholder="">
+
+                     </div>-->
+                    <div class="form-group">
+                        <label for="journalKeywords">Keywords</label>
+                        <input type="text" class="form-control" id="journalKeywords" aria-describedby=""
+                               placeholder="">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="journalAbstract-textarea">Abstract</label>
+                        <textarea class="form-control ck-textarea" id="journalAbstract-textarea"
+                                  rows="3"></textarea>
+
+                    </div>
+
+
+                    <div id="addJournalPDFDiv" class="form-group hidden">
+                        <label for="addJournalPDF">Select PDF...</label><br>
+                        <input id="addJournalPDF" type="file">
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                        <button class="btn btn-primary btn-sm save-journal-article">Save changes</button>
+                    </div>
+
+            </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+<!-- END Journal Article Modal-->
+
+<!-- Authors Modal-->
+<div class="modal fade" id="authorsModal" tabindex="-1" role="dialog" aria-labelledby="authorsModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Authors</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span
+                        class="font-weight-light" aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <form class="form">
+
+                    <table class="table table-hover border-top-none">
+                        <thead>
+                        <tr>
+                            <th scope="col" style="width: 10%">Author Number</th>
+                            <th scope="col" style="width: 10%">Last Name</th>
+                            <th scope="col" style="width: 10%">First Initial</th>
+
+                        </tr>
+                        </thead>
+                        <tbody id="authorsTable">
+
+
+                        <tr class="application-row" data-authorNum='{{pubID}}'>
+
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="authorNumber" aria-describedby=""
+                                           placeholder="" value=1>
+
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="lastName" aria-describedby=""
+                                           placeholder="">
+
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" id="firstName" aria-describedby=""
+                                           placeholder="">
+
+                                </div>
+                            </td>
+
+
+                        </tbody>
+                    </table>
+
+
+                    <a class="btn btn-primary " data-authorNum="{{pubID}}">
+                        <span class="vertical-align-middle">Next Author</a>
+
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                        <button class="btn btn-primary btn-sm save-journal-article">Save changes</button>
+                    </div>
+
+            </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+<!-- END Journal Article Modal-->
+
+<!-- Species Modal-->
+<div class="modal fade" id="speciesModal" tabindex="-1" role="dialog" aria-labelledby="speciesModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Species</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span
+                        class="font-weight-light" aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <form class="form">
+
+                    <!--<div class="form-group">
+                        <label for="articleTitle">Article Title</label>
+                        <input type="text" class="form-control" id="articleTitle" aria-describedby=""
+                               placeholder="">
+
+                    </div>
+                    &lt;!&ndash;<div class="form-group">
+                        <label for="journalAuthors">Author</label>
+                        <input type="text" class="form-control" id="journalAuthors" aria-describedby=""
+                               placeholder="">
+
+                    </div>&ndash;&gt;
+                    <div class="form-group">
+                        <label for="journal">Journal Title</label>
+                        <input type="text" class="form-control" id="journal" aria-describedby=""
+                               placeholder="">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="journalYear">Year</label>
+                        <input type="text" class="form-control" id="journalYear" aria-describedby=""
+                               placeholder="">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="journalIssue">Issue</label>
+                        <input type="text" class="form-control" id="journalIssue" aria-describedby=""
+                               placeholder="">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="journalPages">Pages</label>
+                        <input type="text" class="form-control" id="journalPages" aria-describedby=""
+                               placeholder="">
+
+                    </div>
+                    &lt;!&ndash; <div class="form-group">
+                         <label for="journalSpecies">Species</label>
+                         <input type="text" class="form-control" id="journalSpecies" aria-describedby=""
+                                placeholder="">
+
+                     </div>&ndash;&gt;
+                    <div class="form-group">
+                        <label for="journalKeywords">Keywords</label>
+                        <input type="text" class="form-control" id="journalKeywords" aria-describedby=""
+                               placeholder="">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="journalAbstract">Abstract</label>
+                        <textarea class="form-control ck-textarea" id="journalAbstract-textarea"
+                                  rows="3"></textarea>
+
+                    </div>
+
+
+
+                    <div id="addJournalPDFDiv" class="form-group hidden">
+                        <label for="addJournalPDF">Select PDF...</label><br>
+                        <input id="addJournalPDF" type="file">
+
+                    </div>
+-->
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                        <button class="btn btn-primary btn-sm save-journal-article">Save changes</button>
+                    </div>
+
+            </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+<!-- END Journal Article Modal-->
+</div>
