@@ -28,3 +28,6 @@
 .tab-modal {
   border: none;
 }
+.navbar {
+  opacity: 0.95;
+}

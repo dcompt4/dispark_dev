@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="632909d1-a243-468d-bf8c-de836be82bd0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/theme.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/theme.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelAGGRC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/modelDispark.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelAGGRCCreate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelAddPublications.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelAlphaTesting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelBetaTesting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelCadCam.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelCareers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelCommercial.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelCommunities.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelCurrentEvents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelElectrocryobiology.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelFabrication.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelForming.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelMicrofabrication.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelMobileLaboratory.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelOysterHatcheries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelPeople.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelPublications.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelResearch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelRoots.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelStrategies.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelStudents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelTechnology.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/modelTutorials.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/addPublications.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/aggrc.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/dispark.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/aggrcCreate.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/alphaTesting.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/betaTesting.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/cadCam.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/careers.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/commercial.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/communities.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/currentEvents.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/electrocryobiology.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/fabrication.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/forming.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/microfabrication.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/mobileLaboratory.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/oysterHatcheries.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/partial/_nav.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/partial/_nav.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/partial/_navCreate.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/partial/_navFabrication.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/people.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/publications.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/research.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/roots.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/strategies.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/students.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/technology.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/tutorials.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewAGGRC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/viewDispark.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewAGGRCCreate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewAddPublications.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewAlphaTesting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewBetaTesting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewCadCam.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewCareers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewCommercial.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewCommunities.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewCurrentEvents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewElectrocryiobiology.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewFabrication.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewForming.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewMicrofabrication.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewMobileLaboratory.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewOysterHatcheries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewPeople.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewPublications.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewResearch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewRoots.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewStrategies.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewStudents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewTechnology.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/viewTutorials.js" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kkj0edxcyuvU4SfKGMSg9SdpJ2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../LSU/reign_aggrc_dev" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="632909d1-a243-468d-bf8c-de836be82bd0" name="Default Changelist" comment="" />
+      <created>1606251261384</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606251261384</updated>
+      <workItem from="1606251262936" duration="12692000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
