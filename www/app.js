@@ -176,26 +176,26 @@ var AppRouter = Backbone.Router.extend({
 
     showDispark: function () {
 
-        /*var prevURL = localStorage.getItem('prevURL');
-        var historyArr = localStorage.getItem('historyArr');
-
-
-        if (prevURL === "load" || historyArr === " ") {
-
-        } else {
-            window.location.reload();
-        }*/
-
-
         disparkViewPage.model.clear();
         disparkViewPage.model.fetch().done(function () {
-            $("#tagcontent").html(disparkViewPage.render().el);
+            var prevURL = localStorage.getItem('prevURL');
+            var historyArr = localStorage.getItem('historyArr');
+
+
+            if (prevURL === "load" || historyArr === " ") {
+
+            } else {
+                window.location.reload();
+            }
+
         });
+
+        $("#tagcontent").html(disparkViewPage.render().el);
 
     },
 
     showUploadPark: function() {
-        /*var prevURL = localStorage.getItem('prevURL');
+        var prevURL = localStorage.getItem('prevURL');
         var historyArr = localStorage.getItem('historyArr');
 
 
@@ -203,7 +203,7 @@ var AppRouter = Backbone.Router.extend({
 
         }else{
             window.location.reload();
-        }*/
+        }
 
         disparkViewPage.model.clear();
         disparkViewPage.model.fetch().done(function () {
