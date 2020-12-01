@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="632909d1-a243-468d-bf8c-de836be82bd0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/template/partial/_navCreate.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/theme.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/theme.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/modelUploadPark.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/modelUploadPark.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/dispark.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/dispark.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/partial/_footer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/partial/_footer.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/partial/_nav.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/partial/_nav.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/uploadPark.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/uploadPark.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/partial.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partial.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/style.css" afterDir="false" />
@@ -28,7 +20,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/template/partial" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
