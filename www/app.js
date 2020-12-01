@@ -68,7 +68,7 @@ var ModelDispark = Backbone.Model.extend({
 var ModelUploadPark = Backbone.Model.extend({
     urlRoot:function(scriptlocation, appID){
 
-        script = 'users.php';
+        script = 'uploadPark.php';
 
 
         return databaseUrl + script;
