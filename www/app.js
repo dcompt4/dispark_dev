@@ -1722,6 +1722,498 @@ var ViewCadCam = Backbone.View.extend({
 
 });
 
+var ViewCareers = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.careers(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
+var ViewCommercial = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.commercial(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
+var ViewCommunities = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.communities(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
+var ViewCurrentEvents = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.currentEvents(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
+var ViewElectrocryobiology = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.electrocryobiology(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
+var ViewFabrication = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.fabrication(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
+var ViewForming = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.forming(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
+var ViewMicrofabrication = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.microfabrication(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
+var ViewMobileLaboratory = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.mobileLaboratory(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
+var ViewOysterHatcheries = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.oysterHatcheries(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
+var ViewPeople = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.people(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+
+});
+
+var ViewPublications = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.publications(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    },
+    getData: function() {
+        var self = this;
+
+        self.model.fetch({
+
+            processData: true,
+            success: function(model, response){
+                ////console.log("Application GET: ");
+                ////console.log(model);
+                ////console.log(response);
+
+                    $("#tagcontent").html(publicationsViewPage.render().el);
+
+
+                /*setTimeout(function(){
+
+                    ////console.log("rendering..");
+                }, 1000);*/
+
+            }
+        });
+    }
+
+
+
+
+
+
+});
+
+var ViewResearch = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.research(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
+var ViewRoots = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.roots(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
+var ViewStrategies = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.strategies(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
+var ViewStudents = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.students(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
+var ViewTechnology = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.technology(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
+var ViewTutorials = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.tutorials(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+
+
+
+
+});
+
 var AppRouter = Backbone.Router.extend({
     routes: {
         "": "showAGGRC",
