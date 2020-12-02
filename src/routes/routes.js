@@ -10,8 +10,10 @@ var AppRouter = Backbone.Router.extend({
 
     showDispark: function () {
 
-        disparkViewPage.model.clear();
-        disparkViewPage.model.fetch().done(function () {
+        disparkViewPage.model.clear().set(disparkViewPage.model.defaults);
+
+
+        disparkViewPage.getData().done(function () {
             var prevURL = localStorage.getItem('prevURL');
             var historyArr = localStorage.getItem('historyArr');
 
@@ -22,9 +24,19 @@ var AppRouter = Backbone.Router.extend({
                 window.location.reload();
             }
 
+
+            /*fade = new $.Deferred();
+            $("#tagcontent").fadeOut(function () {
+                fade.resolve();
+                $("#tagcontent").html(disparkViewPage.render().el);
+            });*/
+            /*setTimeout(function () {
+                $("#tagcontent").html(disparkViewPage.render().el);
+            }, 3000);*/
         });
 
         $("#tagcontent").html(disparkViewPage.render().el);
+
 
     },
 

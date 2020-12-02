@@ -63,17 +63,6 @@
     max-width: 52em;
   }
 }
-.thumb1 {
-  background: url(../assets/img/home/Butch-Gore-Park-in-St.-Amant.jpg) 50% 50% no-repeat;
-  /* 50% 50% centers image in div */
-  width: 250px;
-  height: 250px;
-}
-.thumb1 a {
-  display: block;
-  width: 250px;
-  height: 250px;
-}
 .card-profile {
   background-color: #D8F2D1 !important;
   border-radius: 10px;

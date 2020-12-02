@@ -2489,3 +2489,4 @@ var breakPointConst = spUtils.getCurrentScreanBreakpoint();
     });
   });
 })(jQuery);
+

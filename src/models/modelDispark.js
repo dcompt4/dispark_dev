@@ -1,8 +1,7 @@
 var ModelDispark = Backbone.Model.extend({
     urlRoot:function(scriptlocation, appID){
 
-        script = 'users.php';
-
+        script = 'dispark.php';
 
         return databaseUrl + script;
     },
@@ -41,6 +40,7 @@ var ModelDispark = Backbone.Model.extend({
     },
     defaults: {
 
+        imageFolderPointer: databaseUrl + "uploads/park_images/",
 
     },
     initialize: function() {
