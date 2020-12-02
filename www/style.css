@@ -87,6 +87,12 @@
   border-color: #D8F2D1 !important;
   color: #5f656c !important;
 }
+.park-feature {
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.1875rem;
+  border: #000 1px solid;
+  margin-bottom: 0.625rem;
+}
 ul {
   list-style-type: none;
 }

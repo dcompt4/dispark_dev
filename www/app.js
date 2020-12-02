@@ -65,6 +65,62 @@ var ModelDispark = Backbone.Model.extend({
 
 });
 
+var ModelLogin = Backbone.Model.extend({
+    urlRoot:function(scriptlocation, appID){
+
+        script = 'uploadPark.php';
+
+
+        return databaseUrl + script;
+    },
+    fetchCurrent: function(options){
+        options = options || {};
+        if (options.url === undefined){
+            options.url = databaseUrl + options.scriptlocation + '?appID=' + options.appID;
+        }
+
+        return Backbone.Model.prototype.fetch.call(this, options);
+    },
+    saveOld: Backbone.Model.prototype.save,
+    saveNew: function(options){
+
+
+
+
+    },
+    saveCurrent: function(options, obj){
+        var deferredSave = new $.Deferred();
+        options = options || {};
+        if(options.url === undefined){
+            options.url = databaseUrl + options.scriptlocation;
+        }
+
+        Backbone.Model.prototype.save.call(this, null, options).done(function(data, response){
+            ////console.log(this);
+            ////console.log(data);
+            ////console.log(response);
+            deferredSave.resolve(null, response);
+        });
+
+
+
+        return deferredSave.promise();
+    },
+    defaults: {
+
+
+    },
+    initialize: function() {
+
+        //this.defaults.pi.getPI();
+
+    }
+
+
+
+
+});
+
 var ModelUploadPark = Backbone.Model.extend({
     urlRoot:function(scriptlocation, appID){
 
@@ -143,6 +199,28 @@ var ViewDispark = Backbone.View.extend({
 
 });
 
+var ViewLogin = Backbone.View.extend({
+    events: {
+
+
+    },
+    initialize: function() {
+
+
+    },
+    watchModel: function() {
+
+    },
+    render: function() {
+
+
+        this.$el.html(Handlebars.templates.login(this.model.toJSON()));
+        this.delegateEvents();
+        return this;
+    }
+
+});
+
 var ViewUploadPark = Backbone.View.extend({
     events: {
 
@@ -170,7 +248,8 @@ var AppRouter = Backbone.Router.extend({
         "": "showDispark",
         "/": "showDispark",
         "#": "showDispark",
-        "uploadPark": "showUploadPark"
+        "uploadPark": "showUploadPark",
+        "login": "showLogin"
     },
 
 
@@ -199,7 +278,7 @@ var AppRouter = Backbone.Router.extend({
         var historyArr = localStorage.getItem('historyArr');
 
 
-        if(prevURL === "load" || historyArr === "technology"){
+        if(prevURL === "load" || historyArr === "uploadPark"){
 
         }else{
             window.location.reload();
@@ -210,6 +289,23 @@ var AppRouter = Backbone.Router.extend({
             $("#tagcontent").html(uploadParkViewPage.render().el);
         });
    },
+
+    showLogin: function() {
+        var prevURL = localStorage.getItem('prevURL');
+        var historyArr = localStorage.getItem('historyArr');
+
+
+        if(prevURL === "load" || historyArr === "login"){
+
+        }else{
+            window.location.reload();
+        }
+
+        disparkViewPage.model.clear();
+        disparkViewPage.model.fetch().done(function () {
+            $("#tagcontent").html(loginViewPage.render().el);
+        });
+    },
 
 
 
@@ -245,6 +341,9 @@ var disparkViewPage = null; // View for Page
 var uploadParkModelPage = null; //Holder for Model for Data
 var uploadParkViewPage = null; // View for Page
 
+var loginModelPage = null; //Holder for Model for Data
+var loginViewPage = null; // View for Page
+
 
 disparkModelPage = new ModelDispark();
 
@@ -256,6 +355,12 @@ uploadParkModelPage = new ModelUploadPark();
 
 uploadParkViewPage = new ViewUploadPark({
     model: uploadParkModelPage
+});
+
+loginModelPage = new ModelLogin();
+
+loginViewPage = new ViewLogin({
+    model: loginModelPage
 });
 
 
