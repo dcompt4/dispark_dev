@@ -18,7 +18,7 @@ var AppRouter = Backbone.Router.extend({
         }
 
         disparkViewPage.getData().done(function () {
-            /*var prevURL = localStorage.getItem('prevURL');
+            var prevURL = localStorage.getItem('prevURL');
             var historyArr = localStorage.getItem('historyArr');
 
 
@@ -26,7 +26,7 @@ var AppRouter = Backbone.Router.extend({
 
             } else {
                 window.location.reload();
-            }*/
+            }
 
 
             /*fade = new $.Deferred();

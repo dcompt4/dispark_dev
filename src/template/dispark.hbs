@@ -131,12 +131,25 @@
 
 
                                     </div>
+
+
+
+
                                 </div>
+
+                                {{#ifvalue ../loggedIn equals= 1}}
+                                    {{#ifvalue ../userID equals= createdBy}}
+                                        <button class="btn btn-secondary mb-3 editPark" data-parkid="{{parkID}}">Edit</button>
+                                    {{/ifvalue}}
+                                {{/ifvalue}}
+
+
                             </div>
                             <br><br>
                         </div>
                         {{/each}}
 
+                        <br><br>
                         <!--<div class="col-12 col-md-12 sortable-item p-2 basketball"
                              data-zanim-xs='{"animation":"zoom-in","delay":0}'>
                             <div class="card-profile">
@@ -645,11 +658,13 @@
     <!-- <section> close ============================-->
     <!-- ============================================-->
 
-</main>
+    {{>footer}}
+
+
 <!-- ===============================================-->
 <!--    End of Main Content-->
 <!-- ===============================================-->
 
-{{>footer}}
+
 
 
