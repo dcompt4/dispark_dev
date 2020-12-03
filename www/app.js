@@ -68,7 +68,7 @@ var ModelDispark = Backbone.Model.extend({
 var ModelLogin = Backbone.Model.extend({
     urlRoot:function(scriptlocation, appID){
 
-        script = 'uploadPark.php';
+        script = 'login.php';
 
 
         return databaseUrl + script;
@@ -293,6 +293,7 @@ var ViewDispark = Backbone.View.extend({
 var ViewLogin = Backbone.View.extend({
     events: {
 
+        'click .login': 'login',
 
     },
     initialize: function() {
@@ -308,12 +309,51 @@ var ViewLogin = Backbone.View.extend({
         this.$el.html(Handlebars.templates.login(this.model.toJSON()));
         this.delegateEvents();
         return this;
-    }
+    },
+
+    login: function (e) {
+
+        e.preventDefault();
+
+        var self = this;
+
+        loginData = {
+            email: $('#email').val(),
+            pword: $('#password').val(),
+        };
+
+        self.model.set('attempt', loginData);
+
+        self.model.save(null,{
+            type: 'POST',
+            success: function(model, response) {
+                localStorage.setItem('userData', JSON.stringify(response[0]));
+                localStorage.setItem('loggedIn', '1');
+
+                if(response.error) {
+                    alert("Email and password combination are incorrect");
+                } else {
+                    window.location.href='#uploadPark';
+                }
+
+
+            },
+            error: function (model, response) {
+
+            }
+        });
+
+
+
+
+    },
 
 });
 
 var ViewUploadPark = Backbone.View.extend({
     events: {
+
+        'click .savePark': 'addPark',
 
 
     },
@@ -330,7 +370,122 @@ var ViewUploadPark = Backbone.View.extend({
         this.$el.html(Handlebars.templates.uploadPark(this.model.toJSON()));
         this.delegateEvents();
         return this;
-    }
+    },
+
+    addPark: function (e) {
+
+        e.preventDefault();
+
+        var self = this;
+
+        var pavilions = 0;
+        var tennis = 0;
+        var baseball = 0;
+        var soccer = 0;
+        var basketball = 0;
+        var pavilionsIsChecked = $('#pavilions').prop('checked');
+        var tennisIsChecked = $('#tennis').prop('checked');
+        var baseballIsChecked = $('#baseball').prop('checked');
+        var soccerIsChecked = $('#soccer').prop('checked');
+        var basketballIsChecked = $('#basketball').prop('checked');
+
+        if(pavilionsIsChecked) {
+            pavilions = 1;
+        }
+        if(tennisIsChecked) {
+            tennis = 1;
+        }
+        if(baseballIsChecked) {
+            baseball = 1;
+        }
+        if(soccerIsChecked) {
+            soccer = 1;
+        }
+        if(basketballIsChecked) {
+            basketball = 1;
+        }
+
+        var fd = new FormData();
+        myFile = document.getElementById("parkImage").files[0];
+        fd.append('fileToUpload', myFile);
+
+
+        $.ajax({
+
+            url: databaseUrl +'upload_parkImage.php',
+            data: fd,
+            processData: false,
+            contentType: false,
+            type: 'POST',
+            success: function (data) {
+                console.log("Added Image");
+                console.log(data);
+                var results = JSON.parse(data);
+                console.log(results);
+
+                if (results.success === "success") {
+
+                    park = {
+                        parkName: $('#parkName').val(),
+                        parkAddress: $('#parkAddress').val(),
+                        parkBio: $('#parkBio').val(),
+                        pavilions: pavilions,
+                        tennis: tennis,
+                        baseball: baseball,
+                        soccer: soccer,
+                        basketball: basketball,
+                        parkImage: results.filepath,
+                        // createdBy: $('#').val(),
+                        // modifiedBy: $('#').val()
+
+                    };
+
+                    self.model.set('park', park);
+                    /*self.model.set('postParam', 'addPersonnel');*/
+
+
+                    self.model.save(null, {
+                        processData: false,
+                        contentType: false,
+                        success: function (model, response) {
+                            ////console.log("addPersonal New Person");
+                            ////console.log(response);
+                            // self.getData();
+                            // $('#exampleModal').modal('hide');
+
+                            // Clearing Personnel Form
+                            $('#parkName').val('');
+                            $('#parkAddress').val('');
+                            $('#parkBio').val('');
+                            $('#parkImage').val('');
+                            document.getElementById('pavilions').checked = false;
+                            document.getElementById('baseball').checked = false;
+                            document.getElementById('tennis').checked = false;
+                            document.getElementById('soccer').checked = false;
+                            document.getElementById('basketball').checked = false;
+
+                        },
+                        error: function (model, response) {
+                            ////console.log("Error adding User. User could already exist.");
+
+                        }
+                    });
+
+
+                } else if (data == "error") {
+
+                }
+
+
+            }
+        });
+
+
+
+
+
+    },
+
 
 });
 
@@ -347,10 +502,14 @@ var AppRouter = Backbone.Router.extend({
     showDispark: function () {
 
         disparkViewPage.model.clear().set(disparkViewPage.model.defaults);
-
+        if(localStorage.getItem('loggedIn') !== null) {
+            disparkViewPage.model.set('userID', JSON.parse(localStorage.getItem('userData')).userID);
+            disparkViewPage.model.set('email', JSON.parse(localStorage.getItem('userData')).email);
+            disparkViewPage.model.set('loggedIn', JSON.parse(localStorage.getItem('loggedIn')));
+        }
 
         disparkViewPage.getData().done(function () {
-            var prevURL = localStorage.getItem('prevURL');
+            /*var prevURL = localStorage.getItem('prevURL');
             var historyArr = localStorage.getItem('historyArr');
 
 
@@ -358,7 +517,7 @@ var AppRouter = Backbone.Router.extend({
 
             } else {
                 window.location.reload();
-            }
+            }*/
 
 
             /*fade = new $.Deferred();
@@ -377,21 +536,20 @@ var AppRouter = Backbone.Router.extend({
     },
 
     showUploadPark: function() {
-        var prevURL = localStorage.getItem('prevURL');
-        var historyArr = localStorage.getItem('historyArr');
 
+        uploadParkViewPage.model.clear();
 
-        if(prevURL === "load" || historyArr === "uploadPark"){
-
-        }else{
-            window.location.reload();
+        if(localStorage.getItem('loggedIn') === null) {
+            window.location.href = '# ';
         }
 
-        disparkViewPage.model.clear();
-        disparkViewPage.model.fetch().done(function () {
-            $("#tagcontent").html(uploadParkViewPage.render().el);
-        });
-   },
+        uploadParkViewPage.model.set('userID', JSON.parse(localStorage.getItem('userData')).userID);
+        uploadParkViewPage.model.set('email', JSON.parse(localStorage.getItem('userData')).email);
+        uploadParkViewPage.model.set('loggedIn', JSON.parse(localStorage.getItem('loggedIn')));
+
+        $("#tagcontent").html(uploadParkViewPage.render().el);
+
+    },
 
     showLogin: function() {
         var prevURL = localStorage.getItem('prevURL');

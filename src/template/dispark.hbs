@@ -1,4 +1,8 @@
-{{> nav}}
+{{#ifvalue loggedIn equals= 1}}
+    {{> navCreate}}
+{{else}}
+    {{> nav}}
+{{/ifvalue}}
 <!-- ===============================================-->
 <!--    Main Content-->
 <!-- ===============================================-->
@@ -106,10 +110,11 @@
 
                                         <p class="lead" align="left">Features</p>
 
-
-                                        <p class="park-feature">Baseball Fields</p>
-
-                                        <p class="park-feature">Soccer Fields</p>
+                                        {{#ifvalue pavilions equals= 1}}<p class="park-feature">Pavilions</p>{{/ifvalue}}
+                                        {{#ifvalue tennis equals= 1}}<p class="park-feature">Tennis Courts</p>{{/ifvalue}}
+                                        {{#ifvalue baseball equals= 1}}<p class="park-feature">Baseball Fields</p>{{/ifvalue}}
+                                        {{#ifvalue soccer equals= 1}}<p class="park-feature">Soccer Fields</p>{{/ifvalue}}
+                                        {{#ifvalue basketball equals= 1}}<p class="park-feature">Basketball Courts</p>{{/ifvalue}}
 
                                     </div>
                                     <div class="col-5 card-profile-content">

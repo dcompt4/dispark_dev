@@ -11,10 +11,14 @@ var AppRouter = Backbone.Router.extend({
     showDispark: function () {
 
         disparkViewPage.model.clear().set(disparkViewPage.model.defaults);
-
+        if(localStorage.getItem('loggedIn') !== null) {
+            disparkViewPage.model.set('userID', JSON.parse(localStorage.getItem('userData')).userID);
+            disparkViewPage.model.set('email', JSON.parse(localStorage.getItem('userData')).email);
+            disparkViewPage.model.set('loggedIn', JSON.parse(localStorage.getItem('loggedIn')));
+        }
 
         disparkViewPage.getData().done(function () {
-            var prevURL = localStorage.getItem('prevURL');
+            /*var prevURL = localStorage.getItem('prevURL');
             var historyArr = localStorage.getItem('historyArr');
 
 
@@ -22,7 +26,7 @@ var AppRouter = Backbone.Router.extend({
 
             } else {
                 window.location.reload();
-            }
+            }*/
 
 
             /*fade = new $.Deferred();
@@ -41,21 +45,20 @@ var AppRouter = Backbone.Router.extend({
     },
 
     showUploadPark: function() {
-        var prevURL = localStorage.getItem('prevURL');
-        var historyArr = localStorage.getItem('historyArr');
 
+        uploadParkViewPage.model.clear();
 
-        if(prevURL === "load" || historyArr === "uploadPark"){
-
-        }else{
-            window.location.reload();
+        if(localStorage.getItem('loggedIn') === null) {
+            window.location.href = '# ';
         }
 
-        disparkViewPage.model.clear();
-        disparkViewPage.model.fetch().done(function () {
-            $("#tagcontent").html(uploadParkViewPage.render().el);
-        });
-   },
+        uploadParkViewPage.model.set('userID', JSON.parse(localStorage.getItem('userData')).userID);
+        uploadParkViewPage.model.set('email', JSON.parse(localStorage.getItem('userData')).email);
+        uploadParkViewPage.model.set('loggedIn', JSON.parse(localStorage.getItem('loggedIn')));
+
+        $("#tagcontent").html(uploadParkViewPage.render().el);
+
+    },
 
     showLogin: function() {
         var prevURL = localStorage.getItem('prevURL');

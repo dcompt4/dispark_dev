@@ -50,60 +50,56 @@
             <form>
                 <div class="form-group">
                     <label for="title">Park Name</label>
-                    <input class="form-control" id="park-name" type="text" placeholder="Park Name" maxlength="100">
+                    <input class="form-control" id="parkName" type="text" placeholder="Park Name" maxlength="100">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="caption_1">Park Address</label>
-                    <input class="form-control" id="park-address" type="text"
+                    <input class="form-control" id="parkAddress" type="text"
                            placeholder="12345 Street, City, State 12345" maxlength="100">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="caption_2">Park Bio</label>
-                    <input class="form-control" id="park-bio" type="text" placeholder="Park Bio" maxlength="1000">
+                    <input class="form-control" id="parkBio" type="text" placeholder="Park Bio" maxlength="1000">
                 </div>
                 <br>
                 <label class="" for="">Features</label>
+
                 <div class="form-group form-check">
                     <div class="row">
                         <div class="col-2">
-                            <input class="form-check-input" id="defaultcheckbox1" type="checkbox">
-                            <label class="form-check-label" for="defaultcheckbox1">Pavilions</label>
+                            <input class="form-check-input" id="pavilions" type="checkbox">
+                            <label class="form-check-label" for="pavilions">Pavilions</label>
                         </div>
                         <div class="col-2">
-                            <input class="form-check-input" id="defaultcheckbox2" type="checkbox">
-                            <label class="form-check-label" for="defaultcheckbox2">Tennis Courts</label>
+                            <input class="form-check-input" id="tennis" type="checkbox">
+                            <label class="form-check-label" for="tennis">Tennis Courts</label>
                         </div>
                         <div class="col-2">
-                            <input class="form-check-input" id="defaultcheckbox3" type="checkbox">
-                            <label class="form-check-label" for="defaultcheckbox3">Baseball Fields</label>
+                            <input class="form-check-input" id="baseball" type="checkbox">
+                            <label class="form-check-label" for="baseball">Baseball Fields</label>
                         </div>
                         <div class="col-2">
-                            <input class="form-check-input" id="defaultcheckbox4" type="checkbox">
-                            <label class="form-check-label" for="defaultcheckbox4">Soccer Fields</label>
+                            <input class="form-check-input" id="soccer" type="checkbox">
+                            <label class="form-check-label" for="soccer">Soccer Fields</label>
                         </div>
                         <div class="col-2">
-                            <input class="form-check-input" id="defaultcheckbox5" type="checkbox">
-                            <label class="form-check-label" for="defaultcheckbox5">Basketball Courts</label>
+                            <input class="form-check-input" id="basketball" type="checkbox">
+                            <label class="form-check-label" for="basketball">Basketball Courts</label>
                         </div>
                     </div>
                 </div>
                 <br>
                 <div class="form-group">
-                    <label for="exampleFormControlFile1">Park Picture</label>
-                    <input class="form-control-file" id="exampleFormControlFile1" type="file">
-                </div>
-                <br>
-                <div class="custom-control custom-switch">
-                    <input class="custom-control-input" id="active" type="checkbox" style="background-color: #D8F2D1 !important" checked>
-                    <label class="custom-control-label" for="active">Active</label>
+                    <label for="parkImage">Park Picture</label>
+                    <input class="form-control-file" id="parkImage" type="file">
                 </div>
                 <br>
 
 
             </form>
-            <button class="btn btn-primary mb-3 saveAGGRCCreate" type="submit">Save</button>
+            <button class="btn btn-primary mb-3 savePark" type="submit">Save</button>
         </div>
 
 

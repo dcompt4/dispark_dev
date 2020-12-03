@@ -1,7 +1,7 @@
 var ModelLogin = Backbone.Model.extend({
     urlRoot:function(scriptlocation, appID){
 
-        script = 'uploadPark.php';
+        script = 'login.php';
 
 
         return databaseUrl + script;
