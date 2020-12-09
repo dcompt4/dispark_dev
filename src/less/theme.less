@@ -1,58 +1,22 @@
 /* This is where we change the style. Will overwrite all other style. */
 
-.application-row{
-  cursor: pointer;
-
-  .application-actions {
-    float: left;
-    width: 100%;
-
-
-    .btn-group-vertical{
-      display: none;
-      button {
-        margin: 1px;
-      }
-      a{
-        margin: 1px;
-      }
-    }
-  }
-}
-
-.application-row-active {
-  .btn-group-vertical{
-    display: block !important;
-    color: white;
-  }
-
-}
-
-
-.display-none {
-  display: none !important;
-}
-
-.vertical-align-middle{
-  vertical-align: middle;
-}
-
 //Removes extra Border in modals when there are tabs present at the top
 .tab-modal{
   border: none;
 }
 
+//Sets background of nav bar to our light green
 .dispark-nav{
   background-color: #D8F2D1 !important;
   opacity: 0.95 !important;
 }
-//
 
+//CSS for small card style on homepage
+//Not really using this anymore
 .cards {
   display: flex;
   flex-wrap: wrap;
 }
-
 .card {
   flex: 1 0 40em;
   box-sizing: border-box;
@@ -62,41 +26,36 @@
   padding-top: 0;
   //padding: 10px;
 }
-
 @media screen and (min-width: 40em) {
   .card {
     max-width: calc(50% -  1em);
   }
 }
-
 @media screen and (min-width: 60em) {
   .card {
     max-width: calc(25% - 1em);
   }
 }
-
 .centered {
   margin: 0 auto;
   padding: 0 1em;
 }
-
 @media screen and (min-width: 52em) {
   .centered {
     max-width: 52em;
   }
 }
-
 .card-profile {
   background-color: #D8F2D1 !important;
   border-radius: 10px;
   padding: 20px;
 
 }
-
 .card-profile-content.image {
   padding-top: 20px;
 }
 
+//Changes button styles from default. Matches Dispark color scheme
 .btn-primary {
   background-color: #D8F2D1 !important;
   border-color: #D8F2D1 !important;
@@ -104,6 +63,7 @@
 
 }
 
+//Style for feature blocks. Similar to packery items
 .park-feature {
   padding: 0.3125rem 0.625rem;
   border-radius: 0.1875rem;
@@ -112,61 +72,52 @@
 }
 
 
+//Open-Source month css
+//Not using for MVP
 ul {list-style-type: none;}
-
 .prev, .next {
   color: #D8F2D1;
 }
-
-
 .month {
   padding: 70px 25px;
   width: 100%;
   background: #5f656c;
   text-align: center;
 }
-
 .month ul {
   margin: 0;
   padding: 0;
 }
-
 .month ul li {
   color: #D8F2D1;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
-
 .month .prev {
   float: left;
   padding-top: 10px;
 }
-
 .month .next {
   float: right;
   padding-top: 10px;
 }
-
 .weekdays {
   margin: 0;
   padding: 10px 0;
   background-color: #ddd;
 }
-
 .weekdays li {
   display: inline-block;
   width: 13.6%;
   color: #666;
   text-align: center;
 }
-
 .days {
   padding: 10px 0;
   background: #eee;
   margin: 0;
 }
-
 .days li {
   list-style-type: none;
   display: inline-block;
@@ -176,13 +127,11 @@ ul {list-style-type: none;}
   font-size:12px;
   color: #777;
 }
-
 .days li .active {
   padding: 5px;
   background: #5f656c;
   color: #D8F2D1 !important
 }
-
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {
   .weekdays li, .days li {width: 13.1%;}

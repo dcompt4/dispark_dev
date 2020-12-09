@@ -78,75 +78,87 @@
                         <!-- Park Cards <section> begin ===============-->
 
                         {{#each parks}}
-                        <!--Park Profile Card-->
-                        <div class="col-12 col-md-12 sortable-item p-2 {{#ifvalue pavilions equals= 1}}pavilions{{/ifvalue}} {{#ifvalue tennis equals= 1}}tennis{{/ifvalue}} {{#ifvalue baseball equals= 1}}baseball{{/ifvalue}} {{#ifvalue soccer equals= 1}}soccer{{/ifvalue}} {{#ifvalue basketball equals= 1}}basketball{{/ifvalue}}"
-                             data-zanim-xs='{"animation":"zoom-in","delay":0}'>
-                            <div class="card-profile">
+                            <!--Park Profile Card-->
+                            <div class="col-12 col-md-12 sortable-item p-2 {{#ifvalue pavilions
+                                                                                      equals= 1}}pavilions{{/ifvalue}} {{#ifvalue
+                                    tennis equals= 1}}tennis{{/ifvalue}} {{#ifvalue baseball
+                                                                                    equals= 1}}baseball{{/ifvalue}} {{#ifvalue
+                                    soccer equals= 1}}soccer{{/ifvalue}} {{#ifvalue basketball
+                                                                                    equals= 1}}basketball{{/ifvalue}}"
+                                 data-zanim-xs='{"animation":"zoom-in","delay":0}'>
+                                <div class="card-profile">
 
-                                <div class="row card-profile card-profile-content">
+                                    <div class="row card-profile card-profile-content">
 
-                                    <div class="col-6">
+                                        <div class="col-6">
 
-                                        <h2 align="left">{{parkName}}</h2>
-                                    </div>
-                                    <div class="col-6">
+                                            <h2 align="left">{{parkName}}</h2>
+                                        </div>
+                                        <div class="col-6">
 
-                                        <h3 class="" align="left">{{parkAddress}}</h3>
-                                    </div>
-
-                                </div>
-
-                                <div class="row card-profile">
-                                    <div class="col-5 card-profile-content">
-
-                                        <p class="lead" align="left">Park Bio</p>
-
-
-                                        <p class="" align="left">{{parkBio}}</p>
-
+                                            <h3 class="" align="left">{{parkAddress}}</h3>
+                                        </div>
 
                                     </div>
-                                    <div class="col-2 card-profile-content">
 
-                                        <p class="lead" align="left">Features</p>
+                                    <div class="row card-profile">
+                                        <div class="col-5 card-profile-content">
 
-                                        {{#ifvalue pavilions equals= 1}}<p class="park-feature">Pavilions</p>{{/ifvalue}}
-                                        {{#ifvalue tennis equals= 1}}<p class="park-feature">Tennis Courts</p>{{/ifvalue}}
-                                        {{#ifvalue baseball equals= 1}}<p class="park-feature">Baseball Fields</p>{{/ifvalue}}
-                                        {{#ifvalue soccer equals= 1}}<p class="park-feature">Soccer Fields</p>{{/ifvalue}}
-                                        {{#ifvalue basketball equals= 1}}<p class="park-feature">Basketball Courts</p>{{/ifvalue}}
-
-                                    </div>
-                                    <div class="col-5 card-profile-content">
-
-                                        <p class="lead" align="left">Sneak Peek</p>
+                                            <p class="lead" align="left">Park Bio</p>
 
 
-                                        <div class="col-12" align="center">
+                                            <p class="" align="left">{{parkBio}}</p>
 
 
-                                            <img class="rounded w-100" src="{{../imageFolderPointer}}{{parkImage}}"
-                                                 alt=""/>
+                                        </div>
+                                        <div class="col-2 card-profile-content">
+
+                                            <p class="lead" align="left">Features</p>
+
+                                            {{#ifvalue pavilions equals= 1}}
+                                                <p class="park-feature">Pavilions</p>{{/ifvalue}}
+                                            {{#ifvalue tennis equals= 1}}
+                                                <p class="park-feature">Tennis Courts</p>{{/ifvalue}}
+                                            {{#ifvalue baseball equals= 1}}
+                                                <p class="park-feature">Baseball Fields</p>{{/ifvalue}}
+                                            {{#ifvalue soccer equals= 1}}
+                                                <p class="park-feature">Soccer Fields</p>{{/ifvalue}}
+                                            {{#ifvalue basketball equals= 1}}
+                                                <p class="park-feature">Basketball Courts</p>{{/ifvalue}}
+
+                                        </div>
+                                        <div class="col-5 card-profile-content">
+
+                                            <p class="lead" align="left">Sneak Peek</p>
+
+
+                                            <div class="col-12" align="center">
+
+
+                                                <img class="rounded w-100" src="{{../imageFolderPointer}}{{parkImage}}"
+                                                     alt=""/>
+                                            </div>
+
+
                                         </div>
 
 
                                     </div>
 
-
+                                    {{#ifvalue ../loggedIn equals= 1}}
+                                        {{#ifvalue ../userID equals= createdBy}}
+                                            <div class="col-2" align="right">
+                                                <button class="btn btn-secondary mb-3 editPark" align="right"
+                                                        data-parkid="{{parkID}}">Edit
+                                                </button>
+                                            </div>
+                                        {{/ifvalue}}
+                                    {{/ifvalue}}
 
 
                                 </div>
-
-                                {{#ifvalue ../loggedIn equals= 1}}
-                                    {{#ifvalue ../userID equals= createdBy}}
-                                        <button class="btn btn-secondary mb-3 editPark" data-parkid="{{parkID}}">Edit</button>
-                                    {{/ifvalue}}
-                                {{/ifvalue}}
-
-
+                                <br><br>
                             </div>
-                            <br><br>
-                        </div>
                         {{/each}}
 
                         <br><br>
@@ -409,13 +421,6 @@
                         </div>-->
 
 
-
-
-
-
-
-
-
                         <!-- Park Cards <section> end =================-->
                         <!-- ============================================-->
 
@@ -661,9 +666,9 @@
     {{>footer}}
 
 
-<!-- ===============================================-->
-<!--    End of Main Content-->
-<!-- ===============================================-->
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
 
 
 

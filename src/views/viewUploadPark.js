@@ -83,8 +83,8 @@ var ViewUploadPark = Backbone.View.extend({
                         soccer: soccer,
                         basketball: basketball,
                         parkImage: results.filepath,
-                        // createdBy: $('#').val(),
-                        // modifiedBy: $('#').val()
+                        createdBy: uploadParkModelPage.attributes.userID,
+                        modifiedBy: uploadParkModelPage.attributes.userID
 
                     };
 
